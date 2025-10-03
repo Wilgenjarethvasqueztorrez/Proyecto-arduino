@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Servo</title>
+</head>
+<body>
+  <h1>Control de Servomotor</h1>
+  <input type="range" min="0" max="180" id="slider">
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const slider = document.getElementById('slider');
+
+    slider.addEventListener('input', () => {
+      socket.emit('servo', slider.value);
+    });
+  </script>
+</body>
+</html>
