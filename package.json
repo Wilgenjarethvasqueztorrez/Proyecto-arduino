@@ -1,17 +1,22 @@
 {
   "name": "proyecto-arduino",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Servidor Node.js para controlar servo con Arduino",
   "dependencies": {
+    "@serialport/parser-readline": "^11.0.0",
     "express": "^5.1.0",
+    "http": "^0.0.1-security",
     "serialport": "^13.0.0",
     "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
